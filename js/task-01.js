@@ -1,10 +1,6 @@
 const listCategories = document.querySelectorAll(".item");
 console.log(`Number of categories: ${listCategories.length}`);
 
-const testFirstCategories =
-  document.querySelectorAll(".item").firstElementChild;
-console.log(testFirstCategories);
-
 function getCategoryDetails(name, quantity) {
   console.log(`Category: ${name}`);
   console.log(`Elements: ${quantity}`);

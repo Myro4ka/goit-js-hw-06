@@ -1,8 +1,24 @@
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
+
+const list = document.querySelector("#ingredients");
+
+function createListIngr(array) {
+  const ingrArray = [];
+
+  array.map((item) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = item;
+    listItem.className = "item";
+    ingrArray.push(listItem);
+  });
+  list.append(...ingrArray);
+}
+
+createListIngr(ingredients);
