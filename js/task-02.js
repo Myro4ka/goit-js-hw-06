@@ -10,13 +10,11 @@ const ingredients = [
 const list = document.querySelector("#ingredients");
 
 function createListIngr(array) {
-  const ingrArray = [];
-
-  array.map((item) => {
+  const ingrArray = array.map((item) => {
     const listItem = document.createElement("li");
     listItem.textContent = item;
     listItem.className = "item";
-    ingrArray.push(listItem);
+    return listItem;
   });
   list.append(...ingrArray);
 }
