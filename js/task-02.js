@@ -13,7 +13,7 @@ function createListIngr(array) {
   const ingrArray = array.map((item) => {
     const listItem = document.createElement("li");
     listItem.textContent = item;
-    listItem.className = "item";
+    listItem.classList.add("item");
     return listItem;
   });
   list.append(...ingrArray);
